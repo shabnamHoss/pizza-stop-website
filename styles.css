@@ -47,12 +47,11 @@ header {
     color: var(--secondary-color);
 }
 /* Content */
+/*
 .login-conainer{
     max-width: 400px;
-}
-.container {
-    margin-top: 10px;
-}
+} */
+
 .text-label{
     color: var(--secondary-color);
 }
