@@ -50,26 +50,55 @@ header {
 .container {
     margin-top: 10px;
 }
-.custom-card .card-body {
-    border: 1px solid var(--primary-color);
+.custom-card {
+    border: none; 
 }
 .card-title {
-    font-family: 'Roboto', sans-serif; /* Use Google font 'Roboto' */
-    font-weight: bold;
-    font-size: 1.3rem;
+     font-size: 25px;
+    font-weight: 300;
+    border-bottom: 1px dashed var(--secondary-color);
+    line-height: 2;
 }
 
 .card-text {
-    font-family: 'Open Sans', sans-serif; /* Use Google font 'Open Sans' */
-    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;
 }
-
-h1 {
-    margin-bottom: 20px;
-    color: var(--primary-color); /* Tomato Red */
+.card-text a {
+    color: black;
 }
-
+.card-text a:hover{
+font-weight: bold;
+    color: var(--primary-color);
+}
+h1 {
+    font-weight: 700;
+    line-height: 2;
+    margin-bottom: 0;
+    position: relative;
+    text-transform: capitalize;
+    color: var(--primary-color); 
+}
+h1::after {
+    position: absolute;
+    content: "";
+    background: #fbc531;
+    width: 30px;
+    height: 2px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1::before {
+    background: #c0392b;
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    content: "";
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* Map */
 #map {
     margin-bottom: 20px;
