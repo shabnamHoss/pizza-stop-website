@@ -1,46 +1,41 @@
 /* styles.css */
 :root {
---primary-color: #ff9c00; /* Tomato Red */
+    --primary-color: #ff9c00; /* Tomato Red */
 
- 
---primary-bg: #f2f2f2;
+    --primary-bg: #f2f2f2;
 
+    /* Secondary Color: Mozzarella Yellow */
+    --secondary-color: #bf1e2e;
 
-/* Secondary Color: Mozzarella Yellow */
---secondary-color: #bf1e2e;
+    --secondary-bg: #bf1e2e;
+    --footer-bg: #4c4c4c;
+    --footer-text: #fff;
 
+    /* Accent Color: Olive Green */
+    --accent-color: #556b2f;
 
---secondary-bg: #bf1e2e;
---footer-bg: #4c4c4c; 
---footer-text:#fff;
-
-/* Accent Color: Olive Green */
---accent-color: #556B2F;
-
---accent-bg: #556B2F;
-
+    --accent-bg: #556b2f;
 }
 
 /* Header */
 header {
     background-color: var(--primary-bg); /* Tomato Red */
-    
 }
 
 .navbar-brand img {
-    width:50%;
+    width: 50%;
 }
 
 .navbar-nav .nav-link {
     font-weight: bold;
     color: var(--secondary-color); /* Mozzarella Yellow */
 }
-.navbar-nav .nav-link:hover{
+.navbar-nav .nav-link:hover {
     font-weight: bold;
     color: var(--primary-color); /* Mozzarella Yellow */
 }
 /* Active Navigation Link */
-.nav-item.active .nav-link{
+.nav-item.active .nav-link {
     border-bottom: 2px solid var(--primary-color); /* Tomato Red */
 }
 .navbar-toggler .fas.fa-bars {
@@ -52,31 +47,31 @@ header {
     max-width: 400px;
 } */
 
-.text-label{
+.text-label {
     color: var(--secondary-color);
 }
-.btn-costum{
+.btn-costum {
     background-color: var(--primary-color);
 }
 .custom-card {
-    border: none; 
+    border: none;
 }
 .card-title {
-     font-size: 25px;
+    font-size: 25px;
     font-weight: 300;
     border-bottom: 1px dashed var(--secondary-color);
     line-height: 2;
 }
 
 .card-text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.1rem;
 }
 .card-text a {
     color: black;
 }
-.card-text a:hover{
-font-weight: bold;
+.card-text a:hover {
+    font-weight: bold;
     color: var(--primary-color);
 }
 h1 {
@@ -85,7 +80,7 @@ h1 {
     margin-bottom: 0;
     position: relative;
     text-transform: capitalize;
-    color: var(--primary-color); 
+    color: var(--primary-color);
     text-align: center;
 }
 h1::after {

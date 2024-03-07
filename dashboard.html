@@ -1,65 +1,66 @@
 <!-- dashboard.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrative Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<!-- Header -->
-<header>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <!-- Logo and Hamburger Icon -->
-            <div class="d-flex justify-content-between w-100">
-                <!-- Logo -->
-                <div class="navbar-brand">
-                    <img src="img/logo.png" alt="Logo" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Administrative Dashboard</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo and Hamburger Icon -->
+                    <div class="d-flex justify-content-between w-100">
+                        <!-- Logo -->
+                        <div class="navbar-brand">
+                            <img src="img/logo.png" alt="Logo" />
+                        </div>
+                        <!-- Hamburger Icon for Mobile -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="fas fa-bars"></span>
+                            <!-- Font Awesome hamburger icon -->
+                        </button>
+                    </div>
+                    <!-- End Logo and Hamburger Icon -->
+
+                    <!-- Navbar Links -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Navbar Links -->
                 </div>
-                <!-- Hamburger Icon for Mobile -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fas fa-bars"></span> <!-- Font Awesome hamburger icon -->
-                </button>
-            </div>
-            <!-- End Logo and Hamburger Icon -->
+            </nav>
+        </header>
 
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="menu.html">Menu</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="dashboard.html">Dashboard</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- End Navbar Links -->
-        </div>
-    </nav>
-</header>
+        <!-- Content -->
 
-    <!-- Content -->
-   
         <!-- Login Form -->
-        <div class="container login-conainer mt-5 ">
+        <div class="container login-conainer mt-5">
             <h1 class="text-center mb-4">Administrative Dashboard</h1>
-    
+
             <form id="loginForm" class="w-50 mx-auto">
                 <div class="form-group">
-                    <label for="username" class="text-label ">Username:</label>
-                    <input type="text" class="form-control " id="username" placeholder="Enter Username" required />
+                    <label for="username" class="text-label">Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username" required />
                 </div>
                 <div class="form-group">
                     <label for="password" class="text-label">Password:</label>
@@ -75,33 +76,31 @@
             <form id="menuItemForm">
                 <div class="form-group">
                     <label for="item">Item:</label>
-                    <input type="text" class="form-control" id="item" name="item">
+                    <input type="text" class="form-control" id="item" name="item" />
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <input type="text" class="form-control" id="description" name="description">
+                    <input type="text" class="form-control" id="description" name="description" />
                 </div>
                 <div class="form-group">
                     <label for="price">Price:</label>
-                    <input type="text" class="form-control" id="price" name="price">
+                    <input type="text" class="form-control" id="price" name="price" />
                 </div>
                 <button type="submit" class="btn btn-primary">Add Item</button>
             </form>
         </div>
-    
 
-    <!-- Footer -->
-    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50 mb-1 mt-5">
-        <div class="container text-center">
-          <small>University of Denver ICT 4510 Portfolio Assignment</small>
-        </div>
-      </footer>
+        <!-- Footer -->
+        <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50 mb-1 mt-5">
+            <div class="container text-center">
+                <small>University of Denver ICT 4510 Portfolio Assignment</small>
+            </div>
+        </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <script src="dashboard.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-</body>
+        <script src="dashboard.js"></script>
+    </body>
 </html>
