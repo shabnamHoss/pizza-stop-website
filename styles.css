@@ -47,8 +47,17 @@ header {
     color: var(--secondary-color);
 }
 /* Content */
+.login-conainer{
+    max-width: 400px;
+}
 .container {
     margin-top: 10px;
+}
+.text-label{
+    color: var(--secondary-color);
+}
+.btn-costum{
+    background-color: var(--primary-color);
 }
 .custom-card {
     border: none; 
@@ -78,6 +87,7 @@ h1 {
     position: relative;
     text-transform: capitalize;
     color: var(--primary-color); 
+    text-align: center;
 }
 h1::after {
     position: absolute;
