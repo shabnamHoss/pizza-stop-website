@@ -1,0 +1,125 @@
+/* styles.css */
+:root {
+--primary-color: #ff9c00; /* Tomato Red */
+
+ 
+--primary-bg: #f2f2f2;
+
+
+/* Secondary Color: Mozzarella Yellow */
+--secondary-color: #bf1e2e;
+
+
+--secondary-bg: #bf1e2e;
+--footer-bg: #4c4c4c; 
+--footer-text:#fff;
+
+/* Accent Color: Olive Green */
+--accent-color: #556B2F;
+
+--accent-bg: #556B2F;
+
+}
+
+/* Header */
+header {
+    background-color: var(--primary-bg); /* Tomato Red */
+    
+}
+
+.navbar-brand img {
+    width:50%;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--secondary-color); /* Mozzarella Yellow */
+}
+.navbar-nav .nav-link:hover{
+    font-weight: bold;
+    color: var(--primary-color); /* Mozzarella Yellow */
+}
+/* Active Navigation Link */
+.nav-item.active .nav-link{
+    border-bottom: 2px solid var(--primary-color); /* Tomato Red */
+}
+.navbar-toggler .fas.fa-bars {
+    color: var(--secondary-color);
+}
+/* Content */
+.container {
+    margin-top: 10px;
+}
+.custom-card .card-body {
+    border: 1px solid var(--primary-color);
+}
+.card-title {
+    font-family: 'Roboto', sans-serif; /* Use Google font 'Roboto' */
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.card-text {
+    font-family: 'Open Sans', sans-serif; /* Use Google font 'Open Sans' */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Tomato Red */
+}
+
+/* Map */
+#map {
+    margin-bottom: 20px;
+    height: 400px;
+}
+
+/* Contact Information, Address, Hours of Operation */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-color); /* Olive Green */
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 400px; /* Adjust the height of carousel images */
+    object-fit: cover; /* Ensure images cover the entire carousel */
+}
+
+/* Footer */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer span {
+    font-size: 14px;
+}
+
+/* Login Form */
+#loginForm {
+    margin-top: 50px;
+}
+
+#loginForm h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Tomato Red */
+}
+
+/* Menu Item Form */
+#menuForm {
+    margin-top: 50px;
+}
+
+#menuForm h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Tomato Red */
+}

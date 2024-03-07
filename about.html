@@ -1,0 +1,123 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo and Hamburger Icon -->
+            <div class="d-flex justify-content-between w-100">
+                <!-- Logo -->
+                <div class="navbar-brand">
+                    <img src="img/logo.png" alt="Logo" />
+                </div>
+                <!-- Hamburger Icon for Mobile -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span> <!-- Font Awesome hamburger icon -->
+                </button>
+            </div>
+            <!-- End Logo and Hamburger Icon -->
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Navbar Links -->
+        </div>
+    </nav>
+</header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">About Us</h1>
+        <div id="map" class="mb-4"></div>
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 custom-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-address-card"></i> Contact Information</h2>
+                        <p class="card-text"><i class="fas fa-phone"></i> <a href="tel:+13038712000">+1 303-871-2000</a></p>
+                        <p class="card-text"><i class="fas fa-envelope"></i> <a href="mailto:info@pizzastop.com">info@pizzastop.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Address -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 custom-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="fas fa-map-marker-alt"></i> Address</h2>
+                        <p class="card-text">2150 East Evans Avenue</p>
+                        <p class="card-text">Denver, CO 80208</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hours of Operation -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 custom-card">
+                    <div class="card-body">
+                        <h2 class="card-title"><i class="far fa-clock"></i> Hours of Operation</h2>
+                        <p class="card-text">Monday - Friday: 9:00 - 21:00 </p>
+                        <p class="card-text">Saturday - Sunday: 10:00 - 20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50 mb-1 mt-5">
+        <div class="container text-center">
+          <small>University of Denver ICT 4510 Portfolio Assignment</small>
+        </div>
+      </footer>
+
+    <!-- Leaflet Map Script -->
+    <script>
+        var map = L.map('map').setView([39.678380, -104.961753], 16); // Set initial map coordinates and zoom level
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([39.678380, -104.961753]).addTo(map); // Add marker to the map at the specified coordinates
+        marker.bindPopup("<b>University of Denver</b><br>2150 East Evans Avenue").openPopup(); // Add popup message to the marker
+    </script>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
