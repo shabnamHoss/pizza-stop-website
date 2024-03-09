@@ -11,7 +11,6 @@
     text-transform: capitalize;
 }
 .page_title h1::before {
-    background: var(--primary-color);
     width: 70px;
     height: 2px;
     position: absolute;
@@ -53,9 +52,9 @@
     color: #000;
 }
 .nav-tabs .nav-link:hover {
-    background: #c0392b;
+    background: var(--primary-color);
     color: #fff;
-    border: 1px solid #c0392b;
+    border: 1px solid var(--primary-color);
 }
 .single_menu {
     position: relative;
