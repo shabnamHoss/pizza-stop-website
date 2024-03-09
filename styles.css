@@ -156,3 +156,25 @@ h2 {
     margin-bottom: 20px;
     color: var(--primary-color); /* Tomato Red */
 }
+/* dashboard CSS*/
+#logoutNavItem a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Adjust padding as needed */
+    color: var(--secondary-color); /* Adjust color as needed */
+    text-decoration: none; /* Remove default link underline */
+}
+
+#logoutNavItem a:hover {
+    color: var(--primary-color); /* Adjust background color on hover as needed */
+}
+
+#logoutNavItem a i {
+    margin-top: 4px; /* Adjust margin between icon and text */
+}
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--secondary-color); /* Olive Green */
+}

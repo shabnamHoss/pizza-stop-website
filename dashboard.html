@@ -44,6 +44,12 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="dashboard.html">Dashboard</a>
                             </li>
+                            <!-- Add the logout button here, initially hidden -->
+                            <li class="nav-item" id="logoutNavItem" style="display: none;">
+                                <a id="logoutButton" href="dashboard.html">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <!-- End Navbar Links -->
@@ -71,23 +77,25 @@
         </div>
 
         <!-- Menu Item Form -->
-        <div id="menuForm" style="display: none;">
-            <h2>Add Menu Item</h2>
-            <form id="menuItemForm">
-                <div class="form-group">
-                    <label for="item">Item:</label>
-                    <input type="text" class="form-control" id="item" name="item" />
-                </div>
-                <div class="form-group">
-                    <label for="description">Description:</label>
-                    <input type="text" class="form-control" id="description" name="description" />
-                </div>
-                <div class="form-group">
-                    <label for="price">Price:</label>
-                    <input type="text" class="form-control" id="price" name="price" />
-                </div>
-                <button type="submit" class="btn btn-primary">Add Item</button>
-            </form>
+        <div class="container login-conainer mt-5">
+            <div id="menuForm" style="display: none;">
+                <h3 class="text-center mb-4">Add Menu Item</h3>
+                <form id="menuItemForm" class="w-50 mx-auto">
+                    <div class="form-group">
+                        <label for="item" class="text-label">Item:</label>
+                        <input type="text" class="form-control" id="item" name="item" />
+                    </div>
+                    <div class="form-group">
+                        <label for="description" class="text-label">Description:</label>
+                        <input type="text" class="form-control" id="description" name="description" />
+                    </div>
+                    <div class="form-group">
+                        <label for="price" class="text-label">Price:</label>
+                        <input type="text" class="form-control" id="price" name="price" />
+                    </div>
+                    <button type="submit" class="btn btn-costum btn-block">Add Item</button>
+                </form>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -97,7 +105,7 @@
             </div>
         </footer>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

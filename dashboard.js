@@ -1,87 +1,68 @@
-// dashboard.js
-
-$(document).ready(function () {
-    // Check if the user is already logged in
-    const user = sessionStorage.getItem("user");
-    if (user) {
-        // Hide login form and show menu item form
-        $("#loginForm").hide();
-        $("#menuForm").show();
-    } else {
-        // Show login form and hide menu item form
-        $("#loginForm").show();
-        $("#menuForm").hide();
-    }
-
-    // Login form submission
-    $("#loginForm").submit(function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get username and password from form inputs
-        const username = $("#username").val();
-        const password = $("#password").val();
-
-        // AJAX POST request to login endpoint
-        $.ajax({
-            url: "https://ict4510.herokuapp.com/api/login",
-            method: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({ username, password }),
-            success: function (response) {
-                // Save user object to sessionStorage
-                sessionStorage.setItem("user", JSON.stringify(response));
-
-                // Hide login form and show menu item form
-                $("#loginForm").hide();
-                $("#menuForm").show();
-            },
-            error: function (xhr, status, error) {
-                // Handle login error (e.g., display error message)
-                console.error(error);
-            },
-        });
+// dashboard.js 
+$(document).ready(function() {
+    // Login Form Submission
+   
+$("#loginForm").submit(function(event) {
+    event.preventDefault();
+    
+    var username = $("#username").val();
+    var password = $("#password").val();
+    
+    $.ajax({
+        type: "POST",
+        url: "https://ict4510.herokuapp.com/api/login",
+        data: JSON.stringify({ username: username, password: password }),
+        contentType: "application/json",
+        success: function(response) {
+            // Show the logout button after successful login
+            $("#logoutNavItem").show();
+            
+            // Store user data in session storage
+            sessionStorage.setItem("user", JSON.stringify(response.user));
+            
+            // Hide the login form and show the menu form
+            $("#loginForm").hide();
+            $("#menuForm").show();
+        },
+        error: function(xhr, status, error) {
+            alert("Login failed. Please try again.");
+        }
     });
+});
 
-    // Logout process
-    $("#logoutBtn").click(function () {
-        // Remove user object from sessionStorage
+    
+    // Logout Process
+    $("#logoutButton").click(function() {
         sessionStorage.removeItem("user");
-
-        // Show login form and hide menu item form
-        $("#loginForm").show();
         $("#menuForm").hide();
+        $("#loginForm").show();
     });
-
-    // Menu item form submission
-    $("#menuItemForm").submit(function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get menu item details from form inputs
-        const item = $("#item").val();
-        const description = $("#description").val();
-        const price = $("#price").val();
-
-        // Get user object from sessionStorage
-        const user = JSON.parse(sessionStorage.getItem("user"));
-        const token = user.token;
-
-        // AJAX POST request to menu items endpoint
+    
+    // Menu Item Form Submission
+    $("#menuItemForm").submit(function(event) {
+        event.preventDefault();
+        
+        var user = JSON.parse(sessionStorage.getItem("user"));
+        var item = $("#item").val();
+        var description = $("#description").val();
+        var price = $("#price").val();
+        
         $.ajax({
-            url: `https://ict4510.herokuapp.com/api/menus?api_key=${user.api_key}`,
-            method: "POST",
+            type: "POST",
+            url: "https://ict4510.herokuapp.com/api/menus?api_key=" + user.api_key,
+            data: JSON.stringify({ item: item, description: description, price: price }),
             headers: {
-                "x-access-token": token,
+                "x-access-token": user.session_token
             },
             contentType: "application/json",
-            data: JSON.stringify({ item, description, price }),
-            success: function (response) {
-                // Handle successful menu item addition (e.g., display success message)
-                console.log("Menu item added successfully:", response);
+            success: function(response) {
+                alert("Menu item added successfully!");
             },
-            error: function (xhr, status, error) {
-                // Handle menu item addition error (e.g., display error message)
-                console.error(error);
-            },
+            error: function(xhr, status, error) {
+                alert("Failed to add menu item. Please try again.");
+            }
         });
     });
 });
+
+
