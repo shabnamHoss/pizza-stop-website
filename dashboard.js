@@ -18,7 +18,8 @@ $("#loginForm").submit(function(event) {
             $("#logoutNavItem").show();
             
             // Store user data in session storage
-            sessionStorage.setItem("user", JSON.stringify(response.user));
+            sessionStorage.setItem("api_key", JSON.stringify(response.user.api_key));
+            sessionStorage.setItem("token", JSON.stringify(response.user.token));
             
             // Hide the login form and show the menu form
             $("#loginForm").hide();
