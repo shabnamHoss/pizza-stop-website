@@ -236,9 +236,14 @@ $(document).ready(function() {
             if (response && response.menu) {
                 $("#dynamic-menu-items").empty();
                 response.menu.forEach(function(menuItem) {
+                    // index of menuItem
+                    var index = response.menu.indexOf(menuItem);
+
                     var menuItemHtml = `
                         <div class="single_menu">
                             
+                            <img src="./img/${index}.jpg" alt="${menuItem.item}" />
+
                             <div class="menu_content">
                                 <h4>${menuItem.item} <span>$${menuItem.price}</span></h4>
                                 <p>${menuItem.description}</p>
