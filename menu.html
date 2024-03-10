@@ -177,7 +177,6 @@
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="scriptss.js"></script>
 <!-- Add this script tag after your footer to include your JavaScript code -->
 <!--<script>
     // Wait for the document to be fully loaded before executing the JavaScript
@@ -222,18 +221,26 @@
 </script> -->
 <script>
 $(document).ready(function() {
+    if (sessionStorage.getItem("user")) {
+        $("#logoutNavItem").show();
+    } else {
+        $("#logoutNavItem").hide();
+    }
+
+    var user = JSON.parse(sessionStorage.getItem("user"));
+    
     $.ajax({
-        url: "https://ict4510.herokuapp.com/api/menus?api_key=<your-api-key>",
+        url: "https://ict4510.herokuapp.com/api/menus?api_key=" + user.api_key,
         method: "GET",
         success: function(response) {
-            if (response && response.menuItems) {
+            if (response && response.menu) {
                 $("#dynamic-menu-items").empty();
-                response.menuItems.forEach(function(menuItem) {
+                response.menu.forEach(function(menuItem) {
                     var menuItemHtml = `
                         <div class="single_menu">
-                            <img src="${menuItem.image}" alt="${menuItem.name}" />
+                            
                             <div class="menu_content">
-                                <h4>${menuItem.name} <span>$${menuItem.price}</span></h4>
+                                <h4>${menuItem.item} <span>$${menuItem.price}</span></h4>
                                 <p>${menuItem.description}</p>
                             </div>
                         </div>

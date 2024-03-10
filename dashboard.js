@@ -9,6 +9,7 @@ $(document).ready(function () {
     } else {
         $("#menuForm").hide();
         $("#loginForm").show();
+        $("#logoutNavItem").hide();
     }
 
     $("#loginForm").submit(function (event) {
