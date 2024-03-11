@@ -28,6 +28,9 @@
     transform: translate(-50%, -50%);
 }
 /*Menu starts*/
+#our_menu{
+    min-height: 500px;
+}
 .menu_tab {
     margin: 0 auto;
     justify-content: center;
