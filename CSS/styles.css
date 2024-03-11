@@ -115,7 +115,7 @@ h2 {
 }
 
 /* Footer */
-#sticky-footer {
+.footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
     padding: 20px 0;
@@ -124,11 +124,6 @@ h2 {
     width: 100%;
     text-align: center;
 }
-
-#sticky-footer small {
-    font-size: 14px;
-}
-
 
 /* Login Form */
 #loginForm {
