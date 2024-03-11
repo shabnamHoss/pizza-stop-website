@@ -1,25 +1,21 @@
 /* styles.css */
 :root {
-    --primary-color: #ff9c00; /* Tomato Red */
+    --primary-color: #ff9c00; /* Mozzarella Yellow */
 
     --primary-bg: #f2f2f2;
 
-    /* Secondary Color: Mozzarella Yellow */
+    /* Secondary Color: Tomato Red   */
     --secondary-color: #bf1e2e;
 
     --secondary-bg: #bf1e2e;
     --footer-bg: #4c4c4c;
     --footer-text: #fff;
 
-    /* Accent Color: Olive Green */
-    --accent-color: #556b2f;
-
-    --accent-bg: #556b2f;
 }
 
 /* Header */
 header {
-    background-color: var(--primary-bg); /* Tomato Red */
+    background-color: var(--primary-bg); 
 }
 
 .navbar-brand img {
@@ -28,24 +24,20 @@ header {
 
 .navbar-nav .nav-link {
     font-weight: bold;
-    color: var(--secondary-color); /* Mozzarella Yellow */
+    color: var(--secondary-color); 
 }
 .navbar-nav .nav-link:hover {
     font-weight: bold;
-    color: var(--primary-color); /* Mozzarella Yellow */
+    color: var(--primary-color); 
 }
 /* Active Navigation Link */
 .nav-item.active .nav-link {
-    border-bottom: 2px solid var(--primary-color); /* Tomato Red */
+    border-bottom: 2px solid var(--primary-color); 
 }
 .navbar-toggler .fas.fa-bars {
     color: var(--secondary-color);
 }
 /* Content */
-/*
-.login-conainer{
-    max-width: 400px;
-} */
 
 .text-label {
     color: var(--secondary-color);
@@ -103,6 +95,7 @@ h1::before {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/* About Page */
 /* Map */
 #map {
     margin-bottom: 20px;
@@ -113,12 +106,12 @@ h1::before {
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: var(--secondary-color); /* Olive Green */
+    color: var(--secondary-color); 
 }
 
 /* Carousel */
 .carousel-item img {
-    height: 400px; /* Adjust the height of carousel images */
+    height: 400px; 
     object-fit: cover; /* Ensure images cover the entire carousel */
 }
 
@@ -161,13 +154,13 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px; /* Adjust padding as needed */
-    color: var(--secondary-color); /* Adjust color as needed */
+    padding: 10px; 
+    color: var(--secondary-color); 
     text-decoration: none; /* Remove default link underline */
 }
 
 #logoutNavItem a:hover {
-    color: var(--primary-color); /* Adjust background color on hover as needed */
+    color: var(--primary-color); 
 }
 
 #logoutNavItem a i {
@@ -176,5 +169,5 @@ h2 {
 h3 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: var(--secondary-color); /* Olive Green */
+    color: var(--secondary-color); 
 }

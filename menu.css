@@ -1,7 +1,5 @@
 /* Menu Page CSS */
-.page_title {
-    padding: 30px 0px;
-}
+
 .page_title h1 {
     color: var(--primary-color);
     font-weight: 700;
@@ -22,7 +20,7 @@
 .page_title h1::after {
     position: absolute;
     content: "";
-    background: #fbc531;
+    background: var(--primary-color);
     width: 30px;
     height: 2px;
     top: 90%;
@@ -42,10 +40,10 @@
     transition: 0.3s;
 }
 .nav-tabs .nav-link.active {
-    background: #c0392b;
+    background: var(--secondary-bg);
     color: #fff;
     font-weight: 700;
-    border: 1px solid #c0392b;
+    border: 1px solid var(--secondary-color);
     text-transform: capitalize;
 }
 .nav-link {
@@ -74,6 +72,7 @@
     transition: 0.3s;
     border: 1px solid #ddd;
     border-radius: 5px;
+    object-fit: cover;
 }
 .menu_content {
     padding-left: 200px;
@@ -81,7 +80,7 @@
 .menu_content h4 {
     font-size: 25px;
     font-weight: 300;
-    border-bottom: 1px dashed #c0392b;
+    border-bottom: 1px dashed var(--secondary-color);
     line-height: 2;
     text-transform: capitalize;
 }
@@ -90,7 +89,7 @@
     font-weight: 800;
     float: right;
     font-style: italic;
-    color: #c0392b;
+    color: var(--secondary-color);
 }
 .menu_content p {
     font-weight: 200;
@@ -107,30 +106,4 @@
     margin: 0 auto;
     display: block;
     width: 140px;
-}
-.btn.btn-danger {
-    background: #c0392b;
-    border: 1px solid #c0392b;
-    transition: 0.3s;
-    position: relative;
-    z-index: 1;
-    text-transform: capitalize;
-    font-weight: 700;
-    overflow: hidden;
-    padding: 15px 25px;
-}
-.btn.btn-danger::before {
-    position: absolute;
-    content: "";
-    background: #e74c3c;
-    width: 100%;
-    height: 100%;
-    left: -100%;
-    top: 100%;
-    transition: 0.3s;
-    z-index: -1;
-}
-.btn.btn-danger:hover:before {
-    top: 0;
-    left: 0;
 }

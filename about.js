@@ -1,3 +1,5 @@
+
+
 // Leaflet Map Script -about.JS
 var map = L.map("map").setView([39.67838, -104.961753], 16); // Set initial map coordinates and zoom level
 
@@ -7,3 +9,5 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 var marker = L.marker([39.67838, -104.961753]).addTo(map); // Add marker to the map at the specified coordinates
 marker.bindPopup("<b>University of Denver</b><br>2150 East Evans Avenue").openPopup(); // Add popup message to the marker
+
+
