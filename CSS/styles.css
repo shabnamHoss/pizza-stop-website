@@ -115,15 +115,7 @@ h2 {
 }
 
 /* Footer */
-.footer {
-    background-color: var(--footer-bg);
-    color: var(--footer-text);
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-}
+
 
 /* Login Form */
 #loginForm {
