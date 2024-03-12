@@ -1,15 +1,12 @@
 /* styles.css */
+
 :root {
     --primary-color: #ff9c00; /* Mozzarella Yellow */
-
     --primary-bg: #f2f2f2;
 
     /* Secondary Color: Tomato Red   */
     --secondary-color: #bf1e2e;
-
     --secondary-bg: #bf1e2e;
-    --footer-bg: #4c4c4c;
-    --footer-text: #fff;
 }
 
 /* Header */
@@ -99,6 +96,11 @@ h1::before {
 #map {
     margin-bottom: 20px;
     height: 500px;
+    z-index: 1;
+}
+.about-row{
+    margin-bottom: 50px;
+    padding-bottom: 35px;
 }
 
 /* Contact Information, Address, Hours of Operation */
@@ -115,7 +117,14 @@ h2 {
 }
 
 /* Footer */
-
+.footer {
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
 
 /* Login Form */
 #loginForm {
